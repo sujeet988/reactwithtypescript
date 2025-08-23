@@ -1,4 +1,4 @@
-import {type PropsWithChildren} from "react";
+import { type FC, type PropsWithChildren} from "react";
 // interface CourseGoalProps {
 //     title: string;
 //     children: ReactNode;
@@ -8,8 +8,24 @@ import {type PropsWithChildren} from "react";
    title: string;
  }>
 
-export default function CourseGoal( {title, children}: CourseGoalProps
-) {
+// export default function CourseGoal
+// ( {title, children}: CourseGoalProps
+// ) 
+// {
+//     return (
+//     <article>
+//         <div>
+//             <h2>{title}</h2>
+//             <p>{children}</p>
+//         </div>
+//         <button>Delete</button>
+//         </article>
+//     )
+// }
+
+// Using FC FUNCTIONAL COMPONENT
+const CourseGoal:FC<CourseGoalProps> = ({ title, children}) => {
+
     return (
     <article>
         <div>
@@ -20,3 +36,4 @@ export default function CourseGoal( {title, children}: CourseGoalProps
         </article>
     )
 }
+export default CourseGoal;
