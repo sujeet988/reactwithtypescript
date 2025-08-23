@@ -8,24 +8,10 @@ import { type FC, type PropsWithChildren} from "react";
    title: string;
  }>
 
-// export default function CourseGoal
-// ( {title, children}: CourseGoalProps
-// ) 
-// {
-//     return (
-//     <article>
-//         <div>
-//             <h2>{title}</h2>
-//             <p>{children}</p>
-//         </div>
-//         <button>Delete</button>
-//         </article>
-//     )
-// }
-
-// Using FC FUNCTIONAL COMPONENT
-const CourseGoal:FC<CourseGoalProps> = ({ title, children}) => {
-
+export default function CourseGoal
+( {title, children}: CourseGoalProps
+) 
+{
     return (
     <article>
         <div>
@@ -36,4 +22,18 @@ const CourseGoal:FC<CourseGoalProps> = ({ title, children}) => {
         </article>
     )
 }
-export default CourseGoal;
+
+// Using FC FUNCTIONAL COMPONENT
+// const CourseGoal:FC<CourseGoalProps> = ({ title, children}) => {
+
+//     return (
+//     <article>
+//         <div>
+//             <h2>{title}</h2>
+//             <p>{children}</p>
+//         </div>
+//         <button>Delete</button>
+//         </article>
+//     )
+// }
+// export default CourseGoal;
