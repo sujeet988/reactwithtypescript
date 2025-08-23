@@ -1,14 +1,12 @@
-import {type 
-    ReactNode} from "react";
-interface CourseGoalProps {
-    title: string;
-    children: ReactNode;
- }
+import {type PropsWithChildren} from "react";
+// interface CourseGoalProps {
+//     title: string;
+//     children: ReactNode;
+//  }
 
-// type CourseGoalProps = {
-//     title:string;
-//     description:string;
-// }
+ type CourseGoalProps = PropsWithChildren<{
+   title: string;
+ }>
 
 export default function CourseGoal( {title, children}: CourseGoalProps
 ) {
