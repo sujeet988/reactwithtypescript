@@ -1,7 +1,12 @@
-type CourseGoalProps = {
-    title:string;
-    description:string;
-}
+ interface CourseGoalProps {
+    title: string;
+    description: string;
+ }
+
+// type CourseGoalProps = {
+//     title:string;
+//     description:string;
+// }
 
 export default function CourseGoal( {title, description}: CourseGoalProps
 ) {
