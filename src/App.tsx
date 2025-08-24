@@ -15,12 +15,12 @@ export default function App() {
 
    const[goals, setGoals] = useState<CourseGoalProps[]>([]);
 
-  function handleAddGlobal()
+  function handleAddGlobal(goal:string, summary:string)
   {
     setGoals((prevGoals) => {
       const newGoal:CourseGoalProps = {
-        title:'Learn React + TS',
-        Desccription:'Learn it in depth!',
+        title:goal,
+        Desccription:summary,
         id: Math.random()
       };
       return [...prevGoals, newGoal];
@@ -36,7 +36,7 @@ export default function App() {
       <Header image={{ src:goalsImg, alt:'A List of goals'}}  >
         <h1>your Course Goals</h1>
       </Header>
-      <NewGoal/>
+      <NewGoal onAddGoal = {handleAddGlobal}/>
       <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
     </main>
   );
