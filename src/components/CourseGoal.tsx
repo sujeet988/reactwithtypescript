@@ -4,18 +4,19 @@ import { type FC, type PropsWithChildren} from "react";
 //     children: ReactNode;
 //  }
 
- type CourseGoalProps = PropsWithChildren<{
-   title: string;
+type CourseGoalProps = PropsWithChildren<{
+     id: number;
+     title: string;
  }>
 
 export default function CourseGoal
-( {title, children}: CourseGoalProps
+( {id,title, children}: CourseGoalProps
 ) 
 {
     return (
     <article>
         <div>
-            <h2>{title}</h2>
+            <h2 id="{id}">{title}</h2>
             <p>{children}</p>
         </div>
         <button>Delete</button>
