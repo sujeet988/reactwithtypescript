@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
-import Input from './components/Input.tsx';
-import Form, { type FormHandle } from './components/Form.tsx';
-import Button from './components/Button.tsx';
+import Input from './components/UI/Input.tsx';
+import Form, { type FormHandle } from './components/UI/Form.tsx';
+import Button from './components/UI/Button.tsx';
 
 function App() {
   const customForm = useRef<FormHandle>(null);
