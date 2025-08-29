@@ -1,43 +1,7 @@
-
-import  Header from "./components/Header.tsx";
-import  goalsImg from "./assets/goals.jpg";
-import CourseGoalList from "./components/CourseGoalList.tsx";
-import { useState } from "react";
-import  NewGoal from "./components/NewGoal.tsx";
-
-export type CourseGoalProps = {
-  title:string;
-  Desccription:string;
-  id:number;
+ function App()
+{
+    return(
+      <h1>hi sujeet 1 </h1>
+    );
 }
-
-export default function App() {
-
-   const[goals, setGoals] = useState<CourseGoalProps[]>([]);
-
-  function handleAddGlobal(goal:string, summary:string)
-  {
-    setGoals((prevGoals) => {
-      const newGoal:CourseGoalProps = {
-        title:goal,
-        Desccription:summary,
-        id: Math.random()
-      };
-      return [...prevGoals, newGoal];
-    });
-  }
-    function handleDeleteGoal(id: number) {
-    setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
-  }
-
-  return (
-    <main>
-
-      <Header image={{ src:goalsImg, alt:'A List of goals'}}  >
-        <h1>your Course Goals</h1>
-      </Header>
-      <NewGoal onAddGoal = {handleAddGlobal}/>
-      <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
-    </main>
-  );
-}
+export default App;
